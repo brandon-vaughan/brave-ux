@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Brave UX App</title>
+  <link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+
+  <header class="header">
+
+    <nav class="menu">
+      <button type="button" class="menu--toggle">
+        Menu <span class="icon icon--burger icon--burger--alt"></span>
+      </button>
+      <div class="menu__items">
+        <a href="#" class="menu__item">Dashboard</a>
+        <a href="#" class="menu__item">My Profile</a>
+        <a href="#" class="menu__item">Settings</a>
+        <div class="menu__group">
+          <a href="#" class="menu__item">Help</a>
+          <a href="#" class="menu__item">About</a>
+        </div>
+        <a href="#" class="menu__item">Logout</a>
+      </div>
+    </nav>
+
+    <h1 class="header__title">The Brave UX App</h1>
+  </header>
+
+  <section class="section">
+
+    <div class="privacy">
+      <img class="logo" src="images/flag.svg">
+      <p>Do NOT bookmark this page.</p>
+    </div>
+
+    <form id="signin-form" class="form form--signup" novalidate>
+
+      <div class="message message--error"></div>
+
+      <h2>Sign Up</h2>
+
+      <label class="form__label">
+        Username
+        <input
+          class="form__input"
+          name="username"
+          type="text"
+          required />
+      </label>
+
+      <label class="form__label form__password">
+        Password
+        <input
+          class="form__input"
+          name="password"
+          type="password"
+          value=""
+          required>
+        <span class="form__password__toggle-visibility"></span>
+      </label>
+
+      <a class="button button--text" href="#">Need help?</a>
+
+      <button class="button button--primary" type="submit">Sign Up</button>
+    </form>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer__credits">Powered by Brave UX</div>
+  </footer>
+
+  <script src="scripts/main.js" type="text/javascript" async defer></script>
+</body>
+</html>
