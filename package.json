@@ -1,0 +1,23 @@
+{
+  "name": "brave-ux-app",
+  "version": "0.0.1",
+  "description": "Single page mobile app layout - Code Test",
+  "private": true,
+  "author": "Brandon Vaughan",
+  "main": "app/app.js",
+  "scripts": {},
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "babel-core": "^5.8.24",
+    "browser-sync": "^2.9.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-babel": "^5.2.1",
+    "gulp-sass": "^2.0.4"
+  }
+}
