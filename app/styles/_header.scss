@@ -1,0 +1,136 @@
+/**
+ *
+ * @file Header Styles
+ *
+ */
+
+/* move content down to make space for fixed header */
+body {
+  padding-top: $header-height;
+  box-sizing: border-box;
+}
+
+.header {
+  background: $color-primary-light;
+  color: #fff;
+
+  position: fixed;
+  top: 0;
+  height: $header-height;
+  width: 100%;
+  z-index: 5000;
+  overflow: hidden;
+
+  padding: 18px 25px;
+  box-sizing: border-box;
+
+  &__title {
+    color: #fff;
+    font-size: em(14);
+    font-weight: 400;
+    line-height: 1;
+
+    margin: 0;
+  }
+}
+
+/* Menu */
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  pointer-events: none;
+
+  &--is-expanded {
+    z-index: 1000;
+    pointer-events: auto;
+  }
+
+  &__items {
+    background: $color-primary;
+    box-sizing: border-box;
+
+    height: 100%;
+    width: 220px;
+
+    /* move the menu up and under the toggle */
+    margin-top: -#{$header-height};
+    padding: $header-height 0 15px;
+    position: relative;
+    z-index: -1;
+
+    /* hide menu off to the right by default */
+    margin-right: -220px;
+    float: right;
+
+    /* animate hidden menu from right when expanded */
+    transition: .5s $ease-InOutQuint;
+    .menu--is-expanded & {
+      z-index: 900;
+      margin-right: 0;
+      box-shadow: -5px 0 10px rgba(0,0,0,.2);
+    }
+  }
+
+  /* Individual nav items */
+  &__item {
+    color: #fff;
+    font-size: em(15);
+    line-height: 1;
+    text-decoration: none;
+
+    display: block;
+    padding: 10px 15px 10px 20px;
+    transition: padding .3s;
+
+    &:hover {
+      padding-left: 30px;
+    }
+
+  }
+
+  /* Mobile Menu Toggle */
+  &--toggle {
+    background: $color-primary;
+    border: none;
+    color: #fff;
+    font-family: $text-family-primary;
+    font-size: em(15);
+    line-height: 1;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 15px 18px 20px;
+    pointer-events: auto;
+
+    /* position toggle above hidden menu */
+    position: relative;
+    z-index: 1000;
+    display: block;
+
+    height: $header-height;
+    width: 100%;
+    min-width: 100px;
+
+    &:hover {
+      padding-left: 20px;
+    }
+
+    /* position burger icon to the right */
+    .icon {
+      float: right;
+    }
+  }
+
+  /* Group nav items with darker container */
+  &__group {
+    background-color: $color-primary-dark;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+
+}
+
+/*************************************************/

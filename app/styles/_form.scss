@@ -1,0 +1,78 @@
+/**
+ * Form
+ *
+ */
+
+.message {
+  background: $text-color-primary;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  color: #fff;
+  font-family: $text-family-primary;
+  font-size: em(15);
+  text-align: center;
+
+  padding: 15px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 800;
+  transform: translateY(-100px);
+  transition: .4s $ease-InOutQuint;
+
+  &--error {
+    background: $color-error;
+  }
+
+  &--is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form {
+
+  &__label {
+    background: #fff;
+    border-radius: 3px;
+    border: solid 2px #fff;
+    color: $text-color-light;
+
+    display: block;
+    margin: 0 0 15px;
+    padding: 3px 10px;
+    position: relative;
+
+    &--error {
+      border-color: $color-error;
+    }
+  }
+
+  &__input {
+    background: #fff;
+    border: none;
+    color: $text-color-primary;
+    font-family: $text-family-primary;
+    font-size: em(15);
+    padding: 0 10px;
+    outline: none;
+  }
+
+  &__password {
+    &__toggle-visibility {
+      background: url(/images/eye.svg) no-repeat center center;
+      background-size: contain;
+      display: block;
+      width: 25px;
+      height: 23px;
+      position: absolute;
+      right: 10px;
+      top: 3px;
+    }
+  }
+
+  .button--text {
+    float: right;
+  }
+}

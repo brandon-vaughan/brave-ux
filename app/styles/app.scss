@@ -1,0 +1,41 @@
+/**
+ * BRAVE UX APP
+ * @author  Brandon Vaughan
+ *
+ */
+
+/**
+ * Imports
+ */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+
+@import 'variables';
+@import 'reset';
+@import 'copy';
+@import 'form';
+@import 'header';
+@import 'section';
+
+/*************************************************/
+
+body {
+  background: $color-neutral;
+  -webkit-font-smoothing: antialiased;
+}
+
+.logo {
+  height: 50px;
+}
+
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 30px;
+
+  &__credits {
+    color: $text-color-light;
+    font-size: em(16);
+  }
+}

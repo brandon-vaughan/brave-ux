@@ -1,0 +1,42 @@
+/**
+ *
+ * @file Style Variables
+ *
+ */
+
+/* Layout */
+$header-height: 50px;
+
+/* Colors */
+
+$color-primary: #662D91;
+$color-primary-light: #93278F;
+$color-primary-dark: #4D226D;
+
+$color-neutral: #E0E5E8;
+$color-neutral-light: #ECEFF1;
+
+$color-error: #ED462F;
+
+
+/* Typography */
+
+$text-color-primary: #455A64;
+$text-color-primary-light: #626B76;
+$text-color-light: #7A909C;
+$text-family-primary: 'Roboto Condensed', 'Helvetica Neue', 'Arial', sans-serif;
+
+/* Animations */
+$ease-InOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+$ease-OutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-InExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+
+/* Mixins */
+
+$base-size: 16;
+@function em($pixels, $context: $base-size) {
+  @return #{$pixels/$context}em;
+}
+
+
+
